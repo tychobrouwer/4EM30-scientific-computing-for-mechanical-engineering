@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.j2": "jinja-properties",
+        "*.yml": "yaml",
+        "config": "toml",
+        "mylib.h": "c"
+    }
+}

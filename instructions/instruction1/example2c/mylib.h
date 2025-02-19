@@ -28,6 +28,6 @@ void report
      Coin *coins,
      int n);
 
-int valid
+int check
 
     (int amount);

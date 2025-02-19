@@ -141,13 +141,27 @@ void report
 //  Arg. amount     total amount of money
 //----------------------------------------------------------
 
-int valid
+int check
 
     (int amount)
 {
   if (amount % 5 != 0)
   {
     printf("Please enter an amount divisible by 5\n");
+
+    return 0;
+  }
+
+  if (amount > 1000)
+  {
+    printf("Please enter an amount less than 1000\n");
+
+    return 0;
+  }
+
+  if (amount < 0)
+  {
+    printf("Please enter a positive amount\n");
 
     return 0;
   }

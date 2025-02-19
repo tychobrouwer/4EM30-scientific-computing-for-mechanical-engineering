@@ -25,11 +25,11 @@ int main(void)
 
   amount = read();
 
-  //if (valid(amount) == 1)
-  //{
-  split(amount, coins);
-  report(amount, coins, n);
-  //}
+  if (check(amount) == 1)
+  {
+    split(amount, coins);
+    report(amount, coins, n);
+  }
 
   return 0;
 }

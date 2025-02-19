@@ -23,7 +23,7 @@ int check_reset(int amount) {
 }
 
 int check_valid(int amount, int expected) {
-  int valid_check = valid(amount);
+  int valid_check = check(amount);
 
   if (valid_check && !expected || !valid_check && expected) {
     printf("Valid not working correctly\n");
