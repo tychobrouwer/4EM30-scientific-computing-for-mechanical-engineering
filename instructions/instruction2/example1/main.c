@@ -24,17 +24,19 @@ int main(void)
 
   print_grades(grades, studID, count);
 
-  average = calc_average(grades, count);
+  float average = calc_average(grades, count);
 
-  printf("The average grade is : %2.0f\n", average);
+  printf("The average grade is : %2.2f\n", average);
 
   stdDev = calc_std_deviation(grades, count);
 
-  // printf("The standard deviation is : \n");
+  printf("The standard deviation is : %2.2f\n", stdDev);
 
   clear_histogram(hist);
 
-  fill_histogram(grades, hist);
+  fill_histogram(grades, hist, count);
+
+  print_histogram(hist);
 
   return 0;
 }

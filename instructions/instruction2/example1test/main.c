@@ -19,11 +19,11 @@ int main(void)
   int studID[MAX_GRADES];   // Array of student ID numbers
   int count;
 
-  float average; // Average
+  float average, stdDev;
 
   FILE *of;
 
-  of = fopen("test.log", "r");
+  of = fopen("./test.log", "wr");
 
   // Series of tests for lijst1.dat
 
@@ -47,6 +47,28 @@ int main(void)
   fprintf(of, "The average grade should be : 5.5\n");
   fprintf(of, "The calculated average is   : %2.1f\n\n", average);
 
+  // Series of tests for lijst3.dat
+
+  count = read_grades("../grades/lijst3.dat", grades, studID);
+
+  print_grades(grades, studID, count);
+
+  stdDev = calc_std_deviation(grades, count);
+
+  fprintf(of, "The standard deviation should be : 0.0\n");
+  fprintf(of, "The calculated standard deviation is : %2.1f\n\n", stdDev);
+
+  // Series of tests for lijst4.dat
+
+  count = read_grades("../grades/lijst4.dat", grades, studID);
+
+  print_grades(grades, studID, count);
+
+  stdDev = calc_std_deviation(grades, count);
+
+  fprintf(of, "The standard deviation should be : 1.0\n");
+  fprintf(of, "The calculated standard deviation is : %2.1f\n\n", stdDev);
+
   // Series of tests for getHistItem function
 
   fprintf(of, "The value 5.6 should be in interval  : 6\n");
@@ -59,5 +81,8 @@ int main(void)
   fprintf(of, "The calculated interval is           : %d\n\n", get_hist_item(10.0));
 
   printf("Log file: test.log\n");
+
+  fclose(of);
+
   return 0;
 }

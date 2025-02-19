@@ -3,6 +3,11 @@
         "*.j2": "jinja-properties",
         "*.yml": "yaml",
         "config": "toml",
-        "mylib.h": "c"
+        "mylib.h": "c",
+        "bitset": "c",
+        "algorithm": "c",
+        "hash_map": "c",
+        "hash_set": "c",
+        "format": "c"
     }
 }
